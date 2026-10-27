@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="theme-color" content="#b7c8df" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>iPhone Simulator — iOS 26 style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <section class="phone" aria-label="iPhone simulator">
+      <div class="wallpaper" id="wallpaper"></div>
+      <div class="status-bar"><span id="clock">9:41</span><span class="island"></span><span class="status-right">● ᯤ ▰</span></div>
+      <div class="screen" id="screen">
+        <header class="app-header hidden" id="appHeader"><button class="back-button" id="backButton">‹</button><strong id="appTitle">App</strong><button class="header-action" id="headerAction">•••</button></header>
+        <section class="home-screen" id="homeScreen">
+          <div class="date-widget glass"><div id="weekday">TUESDAY</div><strong id="dateText">27</strong><span id="monthText">OCTOBER</span></div>
+          <div class="greeting"><div id="homeTime">9:41</div><span>Good afternoon</span></div>
+          <div class="app-grid" id="appGrid"></div>
+          <div class="dock glass" id="dock"></div>
+        </section>
+        <section class="app-view hidden" id="appView"></section>
+        <section class="control-center hidden" id="controlCenter">
+          <div class="cc-top"><strong>Tuesday, October 27</strong><button id="closeCC">Done</button></div>
+          <div class="cc-grid"><button class="cc-tile active">✈️<span>Airplane</span></button><button class="cc-tile active">◉<span>Wi-Fi</span></button><button class="cc-tile">ᛒ<span>Bluetooth</span></button><button class="cc-tile">☾<span>Focus</span></button></div>
+          <label class="range-row">☀️ Brightness <input id="brightness" type="range" min="55" max="120" value="100"></label>
+          <label class="range-row">🔊 Volume <input type="range" min="0" max="100" value="55"></label>
+          <div class="cc-footer"><button data-open="settings">⚙️ Settings</button><button id="ccLock">🔒 Lock screen</button></div>
+        </section>
+        <section class="lock-screen hidden" id="lockScreen"><div class="lock-date" id="lockDate">Tuesday, October 27</div><div class="lock-time" id="lockTime">9:41</div><div class="lock-notice glass">No new notifications</div><button id="unlockButton">Swipe up to unlock ↑</button></section>
+      </div>
+      <div class="home-indicator" id="homeIndicator" aria-label="Go Home"></div>
+      <div class="gesture-hint">Tip: tap the home bar to return Home</div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
